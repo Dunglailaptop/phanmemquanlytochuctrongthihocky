@@ -1,0 +1,8 @@
+C:\Users\Admin\source\repos\phanmemquanlylichthi\serverqrcode\obj\Debug\serverqrcode.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\phanmemquanlylichthi\serverqrcode\obj\Debug\serverqrcode.csproj.SuggestedBindingRedirects.cache
+C:\Users\Admin\source\repos\phanmemquanlylichthi\serverqrcode\obj\Debug\serverqrcode.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\phanmemquanlylichthi\serverqrcode\bin\Debug\serverqrcode.exe.config
+C:\Users\Admin\source\repos\phanmemquanlylichthi\serverqrcode\bin\Debug\serverqrcode.exe
+C:\Users\Admin\source\repos\phanmemquanlylichthi\serverqrcode\bin\Debug\serverqrcode.pdb
+C:\Users\Admin\source\repos\phanmemquanlylichthi\serverqrcode\obj\Debug\serverqrcode.exe
+C:\Users\Admin\source\repos\phanmemquanlylichthi\serverqrcode\obj\Debug\serverqrcode.pdb

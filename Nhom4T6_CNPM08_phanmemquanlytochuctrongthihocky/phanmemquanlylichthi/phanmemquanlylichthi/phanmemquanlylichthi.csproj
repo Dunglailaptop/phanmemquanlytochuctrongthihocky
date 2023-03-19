@@ -1,0 +1,949 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{24C73CD5-944A-489D-968F-4B444F23B8C1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>phanmemquanlylichthi</RootNamespace>
+    <AssemblyName>phanmemquanlylichthi</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Control.Draggable, Version=1.0.5049.269, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Control.Draggable.1.0.5049.269\lib\net35-Client\Control.Draggable.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.Desktop.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v21.2.UI, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataVisualization.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v21.2.Export, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Spreadsheet.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v21.2.UI, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v21.2.UI, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v21.2.Wizard, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v21.2.Extensions, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraSpreadsheet.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeMap.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.DataSet.3.6.0\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis, Version=1.60.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.60.0\lib\net45\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth, Version=1.60.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.60.0\lib\net461\Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth.PlatformServices, Version=1.60.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.60.0\lib\net461\Google.Apis.Auth.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core, Version=1.60.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Core.1.60.0\lib\net45\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.PlatformServices, Version=1.60.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.60.0\lib\net45\Google.Apis.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Sheets.v4, Version=1.60.0.2979, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Sheets.v4.1.60.0.2979\lib\net45\Google.Apis.Sheets.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QRCoder, Version=1.4.3.0, Culture=neutral, PublicKeyToken=c4ed5b9ae8358a28, processorArchitecture=MSIL">
+      <HintPath>..\packages\QRCoder.1.4.3\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="Z.Dapper.Plus, Version=5.0.0.0, Culture=neutral, PublicKeyToken=59b66d028979105b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Z.Dapper.Plus.5.0.0\lib\net45\Z.Dapper.Plus.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\crypt.cs" />
+    <Compile Include="fromcanbocanhthi\frTRACUUTHONGTINPHANCONG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fromcanbocanhthi\frTRACUUTHONGTINPHANCONG.Designer.cs">
+      <DependentUpon>frTRACUUTHONGTINPHANCONG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fromcanbocanhthi\ribMENUCANBO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fromcanbocanhthi\ribMENUCANBO.Designer.cs">
+      <DependentUpon>ribMENUCANBO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\CanbocanhthiDAO.cs" />
+    <Compile Include="DAO\cathiDAO.cs" />
+    <Compile Include="DAO\ChuyennganhDAO.cs" />
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\dethiDAO.cs" />
+    <Compile Include="DAO\ghengoiDAO.cs" />
+    <Compile Include="DAO\GiangvienDAO.cs" />
+    <Compile Include="DAO\hockyDAO.cs" />
+    <Compile Include="DAO\khoaDAO.cs" />
+    <Compile Include="DAO\KinhphiDAO.cs" />
+    <Compile Include="DAO\lichthiDAO.cs" />
+    <Compile Include="DAO\lopDAO.cs" />
+    <Compile Include="DAO\MonhocDAO.cs" />
+    <Compile Include="DAO\PhongthiDAO.cs" />
+    <Compile Include="DAO\SinhvienDAO.cs" />
+    <Compile Include="DAO\thisinhDAO.cs" />
+    <Compile Include="DTO\innerjoin.cs" />
+    <Compile Include="DTO\model\model.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>model.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="EXCEL\frEXCELLICHTHI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EXCEL\frEXCELLICHTHI.Designer.cs">
+      <DependentUpon>frEXCELLICHTHI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EXCEL\frEXCELPHANCONG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EXCEL\frEXCELPHANCONG.Designer.cs">
+      <DependentUpon>frEXCELPHANCONG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EXCEL\frNHAPEXCELSINHVIEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EXCEL\frNHAPEXCELSINHVIEN.Designer.cs">
+      <DependentUpon>frNHAPEXCELSINHVIEN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EXCEL\FRNHAPEXCELTHISINH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EXCEL\FRNHAPEXCELTHISINH.Designer.cs">
+      <DependentUpon>FRNHAPEXCELTHISINH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formGiangvien\frTHONGTINLICHTHI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formGiangvien\frTHONGTINLICHTHI.Designer.cs">
+      <DependentUpon>frTHONGTINLICHTHI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formGiangvien\FRTHONGTINSINHVIENTHEOLOP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formGiangvien\FRTHONGTINSINHVIENTHEOLOP.Designer.cs">
+      <DependentUpon>FRTHONGTINSINHVIENTHEOLOP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formGiangvien\frTHONGTINTHISINH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formGiangvien\frTHONGTINTHISINH.Designer.cs">
+      <DependentUpon>frTHONGTINTHISINH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formGiangvien\Menugiangvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formGiangvien\Menugiangvien.Designer.cs">
+      <DependentUpon>Menugiangvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanly\FileExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanly\FileExcel.Designer.cs">
+      <DependentUpon>FileExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanly\frDANGKYCANBOCANHTHI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanly\frDANGKYCANBOCANHTHI.Designer.cs">
+      <DependentUpon>frDANGKYCANBOCANHTHI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanly\frQUANLYCANBO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanly\frQUANLYCANBO.Designer.cs">
+      <DependentUpon>frQUANLYCANBO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanly\frQUANLYCATHI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanly\frQUANLYCATHI.Designer.cs">
+      <DependentUpon>frQUANLYCATHI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanly\frQUANLYDETHI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanly\frQUANLYDETHI.Designer.cs">
+      <DependentUpon>frQUANLYDETHI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanly\frQUANLYGIANGVIEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanly\frQUANLYGIANGVIEN.Designer.cs">
+      <DependentUpon>frQUANLYGIANGVIEN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanly\frQUANLYHOCKY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanly\frQUANLYHOCKY.Designer.cs">
+      <DependentUpon>frQUANLYHOCKY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanly\frQUANLYKINHPHI1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanly\frQUANLYKINHPHI1.Designer.cs">
+      <DependentUpon>frQUANLYKINHPHI1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanly\FRQUANLYLICHTHI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanly\FRQUANLYLICHTHI.Designer.cs">
+      <DependentUpon>FRQUANLYLICHTHI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanly\frQUANLYLOP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanly\frQUANLYLOP.Designer.cs">
+      <DependentUpon>frQUANLYLOP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanly\frQUANLYMONHOC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanly\frQUANLYMONHOC.Designer.cs">
+      <DependentUpon>frQUANLYMONHOC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanly\frQUANLYPHANCONGTHI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanly\frQUANLYPHANCONGTHI.Designer.cs">
+      <DependentUpon>frQUANLYPHANCONGTHI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanly\frQUANLYPHONGTHI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanly\frQUANLYPHONGTHI.Designer.cs">
+      <DependentUpon>frQUANLYPHONGTHI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanly\frQUANLYSINHVIEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanly\frQUANLYSINHVIEN.Designer.cs">
+      <DependentUpon>frQUANLYSINHVIEN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanly\frquanlytaikhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanly\frquanlytaikhoan.Designer.cs">
+      <DependentUpon>frquanlytaikhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanly\frQUANLYTHISINH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanly\frQUANLYTHISINH.Designer.cs">
+      <DependentUpon>frQUANLYTHISINH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanly\frTHEMPHONGTHI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanly\frTHEMPHONGTHI.Designer.cs">
+      <DependentUpon>frTHEMPHONGTHI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanly\frTHONGKE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanly\frTHONGKE.Designer.cs">
+      <DependentUpon>frTHONGKE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanly\frthongketheocanbocanhthi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanly\frthongketheocanbocanhthi.Designer.cs">
+      <DependentUpon>frthongketheocanbocanhthi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanly\frTHONGKETHEOGIANGVIEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanly\frTHONGKETHEOGIANGVIEN.Designer.cs">
+      <DependentUpon>frTHONGKETHEOGIANGVIEN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanly\frTHONGTINCHITIET.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanly\frTHONGTINCHITIET.Designer.cs">
+      <DependentUpon>frTHONGTINCHITIET.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanly\FRXEMDS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanly\FRXEMDS.Designer.cs">
+      <DependentUpon>FRXEMDS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanly\ribMenuQuanly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanly\ribMenuQuanly.Designer.cs">
+      <DependentUpon>ribMenuQuanly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanly\thongtintaikhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanly\thongtintaikhoan.Designer.cs">
+      <DependentUpon>thongtintaikhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanly\XtraUserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormQuanly\XtraUserControl1.Designer.cs">
+      <DependentUpon>XtraUserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrDangNhap.Designer.cs">
+      <DependentUpon>FrDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frDANGNHAPDESGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frDANGNHAPDESGIN.Designer.cs">
+      <DependentUpon>frDANGNHAPDESGIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="matkhaucaplai\frQUENMATKHAUQT1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="matkhaucaplai\frQUENMATKHAUQT1.Designer.cs">
+      <DependentUpon>frQUENMATKHAUQT1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="matkhaucaplai\frQUENMATKHAUQT2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="matkhaucaplai\frQUENMATKHAUQT2.Designer.cs">
+      <DependentUpon>frQUENMATKHAUQT2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="matkhaucaplai\frSUAMK.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="matkhaucaplai\frSUAMK.Designer.cs">
+      <DependentUpon>frSUAMK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="matkhaucaplai\SUAMK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="matkhaucaplai\SUAMK.Designer.cs">
+      <DependentUpon>SUAMK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="phanmemquanlylichthiDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>phanmemquanlylichthiDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="phanmemquanlylichthiDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>phanmemquanlylichthiDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="phanmemquanlylichthiDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>phanmemquanlylichthiDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="phanmemquanlylichthiDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>phanmemquanlylichthiDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="phanmemquanlylichthiDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>phanmemquanlylichthiDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="phanmemquanlylichthiDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>phanmemquanlylichthiDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="phanmemquanlylichthiDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>phanmemquanlylichthiDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="phanmemquanlylichthiDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>phanmemquanlylichthiDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="phanmemquanlylichthiDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>phanmemquanlylichthiDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="phanmemquanlylichthiDataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>phanmemquanlylichthiDataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="phanmemquanlylichthiDataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>phanmemquanlylichthiDataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="phanmemquanlylichthiDataSet19.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>phanmemquanlylichthiDataSet19.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="phanmemquanlylichthiDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>phanmemquanlylichthiDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="phanmemquanlylichthiDataSet20.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>phanmemquanlylichthiDataSet20.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="phanmemquanlylichthiDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>phanmemquanlylichthiDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="phanmemquanlylichthiDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>phanmemquanlylichthiDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="phanmemquanlylichthiDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>phanmemquanlylichthiDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="phanmemquanlylichthiDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>phanmemquanlylichthiDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="phanmemquanlylichthiDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>phanmemquanlylichthiDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="phanmemquanlylichthiDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>phanmemquanlylichthiDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="phanmemquanlylichthiDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>phanmemquanlylichthiDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="phanmemquanlylichthiDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>phanmemquanlylichthiDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="REPORT\RR_LICHTHI.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORT\RR_LICHTHI.Designer.cs">
+      <DependentUpon>RR_LICHTHI.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="fromcanbocanhthi\frTRACUUTHONGTINPHANCONG.resx">
+      <DependentUpon>frTRACUUTHONGTINPHANCONG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fromcanbocanhthi\ribMENUCANBO.resx">
+      <DependentUpon>ribMENUCANBO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EXCEL\frEXCELLICHTHI.resx">
+      <DependentUpon>frEXCELLICHTHI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EXCEL\frEXCELPHANCONG.resx">
+      <DependentUpon>frEXCELPHANCONG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EXCEL\frNHAPEXCELSINHVIEN.resx">
+      <DependentUpon>frNHAPEXCELSINHVIEN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EXCEL\FRNHAPEXCELTHISINH.resx">
+      <DependentUpon>FRNHAPEXCELTHISINH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formGiangvien\frTHONGTINLICHTHI.resx">
+      <DependentUpon>frTHONGTINLICHTHI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formGiangvien\FRTHONGTINSINHVIENTHEOLOP.resx">
+      <DependentUpon>FRTHONGTINSINHVIENTHEOLOP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formGiangvien\frTHONGTINTHISINH.resx">
+      <DependentUpon>frTHONGTINTHISINH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formGiangvien\Menugiangvien.resx">
+      <DependentUpon>Menugiangvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanly\FileExcel.resx">
+      <DependentUpon>FileExcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanly\frDANGKYCANBOCANHTHI.resx">
+      <DependentUpon>frDANGKYCANBOCANHTHI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanly\frQUANLYCANBO.resx">
+      <DependentUpon>frQUANLYCANBO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanly\frQUANLYCATHI.resx">
+      <DependentUpon>frQUANLYCATHI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanly\frQUANLYDETHI.resx">
+      <DependentUpon>frQUANLYDETHI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanly\frQUANLYGIANGVIEN.resx">
+      <DependentUpon>frQUANLYGIANGVIEN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanly\frQUANLYHOCKY.resx">
+      <DependentUpon>frQUANLYHOCKY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanly\frQUANLYKINHPHI1.resx">
+      <DependentUpon>frQUANLYKINHPHI1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanly\FRQUANLYLICHTHI.resx">
+      <DependentUpon>FRQUANLYLICHTHI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanly\frQUANLYLOP.resx">
+      <DependentUpon>frQUANLYLOP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanly\frQUANLYMONHOC.resx">
+      <DependentUpon>frQUANLYMONHOC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanly\frQUANLYPHANCONGTHI.resx">
+      <DependentUpon>frQUANLYPHANCONGTHI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanly\frQUANLYPHONGTHI.resx">
+      <DependentUpon>frQUANLYPHONGTHI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanly\frQUANLYSINHVIEN.resx">
+      <DependentUpon>frQUANLYSINHVIEN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanly\frquanlytaikhoan.resx">
+      <DependentUpon>frquanlytaikhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanly\frQUANLYTHISINH.resx">
+      <DependentUpon>frQUANLYTHISINH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanly\frTHEMPHONGTHI.resx">
+      <DependentUpon>frTHEMPHONGTHI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanly\frTHONGKE.resx">
+      <DependentUpon>frTHONGKE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanly\frthongketheocanbocanhthi.resx">
+      <DependentUpon>frthongketheocanbocanhthi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanly\frTHONGKETHEOGIANGVIEN.resx">
+      <DependentUpon>frTHONGKETHEOGIANGVIEN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanly\frTHONGTINCHITIET.resx">
+      <DependentUpon>frTHONGTINCHITIET.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanly\FRXEMDS.resx">
+      <DependentUpon>FRXEMDS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanly\ribMenuQuanly.resx">
+      <DependentUpon>ribMenuQuanly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanly\thongtintaikhoan.resx">
+      <DependentUpon>thongtintaikhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanly\XtraUserControl1.resx">
+      <DependentUpon>XtraUserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrDangNhap.resx">
+      <DependentUpon>FrDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frDANGNHAPDESGIN.resx">
+      <DependentUpon>frDANGNHAPDESGIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="matkhaucaplai\frQUENMATKHAUQT1.resx">
+      <DependentUpon>frQUENMATKHAUQT1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="matkhaucaplai\frQUENMATKHAUQT2.resx">
+      <DependentUpon>frQUENMATKHAUQT2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="matkhaucaplai\frSUAMK.resx">
+      <DependentUpon>frSUAMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="matkhaucaplai\SUAMK.resx">
+      <DependentUpon>SUAMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="REPORT\RR_LICHTHI.resx">
+      <DependentUpon>RR_LICHTHI.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DTO\model\model.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>model.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DTO\model\model.dbml.layout">
+      <DependentUpon>model.dbml</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="phanmemquanlylichthiDataSet.xsc">
+      <DependentUpon>phanmemquanlylichthiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>phanmemquanlylichthiDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet.xss">
+      <DependentUpon>phanmemquanlylichthiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet1.xsc">
+      <DependentUpon>phanmemquanlylichthiDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>phanmemquanlylichthiDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet1.xss">
+      <DependentUpon>phanmemquanlylichthiDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet10.xsc">
+      <DependentUpon>phanmemquanlylichthiDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>phanmemquanlylichthiDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet10.xss">
+      <DependentUpon>phanmemquanlylichthiDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet11.xsc">
+      <DependentUpon>phanmemquanlylichthiDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>phanmemquanlylichthiDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet11.xss">
+      <DependentUpon>phanmemquanlylichthiDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet12.xsc">
+      <DependentUpon>phanmemquanlylichthiDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>phanmemquanlylichthiDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet12.xss">
+      <DependentUpon>phanmemquanlylichthiDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet13.xsc">
+      <DependentUpon>phanmemquanlylichthiDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>phanmemquanlylichthiDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet13.xss">
+      <DependentUpon>phanmemquanlylichthiDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet14.xsc">
+      <DependentUpon>phanmemquanlylichthiDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>phanmemquanlylichthiDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet14.xss">
+      <DependentUpon>phanmemquanlylichthiDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet15.xsc">
+      <DependentUpon>phanmemquanlylichthiDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>phanmemquanlylichthiDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet15.xss">
+      <DependentUpon>phanmemquanlylichthiDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet16.xsc">
+      <DependentUpon>phanmemquanlylichthiDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>phanmemquanlylichthiDataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet16.xss">
+      <DependentUpon>phanmemquanlylichthiDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet17.xsc">
+      <DependentUpon>phanmemquanlylichthiDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>phanmemquanlylichthiDataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet17.xss">
+      <DependentUpon>phanmemquanlylichthiDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet18.xsc">
+      <DependentUpon>phanmemquanlylichthiDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>phanmemquanlylichthiDataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet18.xss">
+      <DependentUpon>phanmemquanlylichthiDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet19.xsc">
+      <DependentUpon>phanmemquanlylichthiDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>phanmemquanlylichthiDataSet19.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet19.xss">
+      <DependentUpon>phanmemquanlylichthiDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet2.xsc">
+      <DependentUpon>phanmemquanlylichthiDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>phanmemquanlylichthiDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet2.xss">
+      <DependentUpon>phanmemquanlylichthiDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet20.xsc">
+      <DependentUpon>phanmemquanlylichthiDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet20.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>phanmemquanlylichthiDataSet20.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet20.xss">
+      <DependentUpon>phanmemquanlylichthiDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet21.xsc">
+      <DependentUpon>phanmemquanlylichthiDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>phanmemquanlylichthiDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet21.xss">
+      <DependentUpon>phanmemquanlylichthiDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet3.xsc">
+      <DependentUpon>phanmemquanlylichthiDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>phanmemquanlylichthiDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet3.xss">
+      <DependentUpon>phanmemquanlylichthiDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet4.xsc">
+      <DependentUpon>phanmemquanlylichthiDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>phanmemquanlylichthiDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet4.xss">
+      <DependentUpon>phanmemquanlylichthiDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet5.xsc">
+      <DependentUpon>phanmemquanlylichthiDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>phanmemquanlylichthiDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet5.xss">
+      <DependentUpon>phanmemquanlylichthiDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet6.xsc">
+      <DependentUpon>phanmemquanlylichthiDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>phanmemquanlylichthiDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet6.xss">
+      <DependentUpon>phanmemquanlylichthiDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet7.xsc">
+      <DependentUpon>phanmemquanlylichthiDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>phanmemquanlylichthiDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet7.xss">
+      <DependentUpon>phanmemquanlylichthiDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet8.xsc">
+      <DependentUpon>phanmemquanlylichthiDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>phanmemquanlylichthiDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet8.xss">
+      <DependentUpon>phanmemquanlylichthiDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet9.xsc">
+      <DependentUpon>phanmemquanlylichthiDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>phanmemquanlylichthiDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="phanmemquanlylichthiDataSet9.xss">
+      <DependentUpon>phanmemquanlylichthiDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="IMG\icons8_Books_32px_3.png" />
+    <Content Include="IMG\icons8_classroom_32px_5.png" />
+    <Content Include="IMG\icons8_class_32px.png" />
+    <Content Include="IMG\icons8_conference_32px.png" />
+    <Content Include="IMG\icons8_copybook_48px.png" />
+    <Content Include="IMG\icons8_curriculum_32px_9.png" />
+    <Content Include="IMG\icons8_exam_32px_1.png" />
+    <Content Include="IMG\icons8_form_32px.png" />
+    <Content Include="IMG\icons8_form_32px_1.png" />
+    <Content Include="IMG\icons8_graduation_cap_48px_1.png" />
+    <Content Include="IMG\icons8_microsoft_excel_32px_8.png" />
+    <Content Include="IMG\icons8_money_box_32px.png" />
+    <Content Include="IMG\icons8_read_online_32px.png" />
+    <Content Include="IMG\icons8_school_32px_7.png" />
+    <Content Include="IMG\icons8_student_male_32px.png" />
+    <Content Include="IMG\icons8_teacher_32px_1.png" />
+    <Content Include="IMG\icons8_User_Menu_Female_32px.png" />
+    <Content Include="IMG\icons8_User_Menu_Female_48px.png" />
+    <Content Include="IMG\icons8_User_Menu_Female_48px_1.png" />
+    <Content Include="IMG\icons8_User_Menu_Female_48px_2.png" />
+    <Content Include="IMG\icons8_xls_32px_2.png" />
+    <Content Include="IMG\noimage.jpg" />
+    <None Include="IMG\qr.jpg" />
+    <None Include="IMG\332989175_1331123847470687_3038523952252889115_n.jpg" />
+    <Content Include="IMG\icons8_graduation_cap_48px.png" />
+    <None Include="IMG\th.jpg" />
+    <None Include="IMG\th %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DAO\NewFolder1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
